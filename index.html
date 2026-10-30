@@ -5,15 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Utforska platser i Sverige med GISLABs Platsorientering." />
     <title>Platsorientering Sverige | GISLAB</title>
+    <script type="module" crossorigin src="/platsorientering/assets/index-N93GyLse.js"></script>
+    <link rel="stylesheet" crossorigin href="/platsorientering/assets/index-HDJpcKcy.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Hoppa till innehållet</a>
     <header>
-      <p class="eyebrow">GISLAB · Projektgrund P1</p>
+      <p class="eyebrow">GISLAB · Platsorientering</p>
       <h1>Platsorientering Sverige</h1>
-      <p>Utforska Sverige på kartan. Kommunval och befolkningsstatistik kommer i nästa etapper.</p>
+      <p>Välj en kommun och utforska området på kartan.</p>
     </header>
     <main id="main">
+      <aside aria-label="Arbetsflöde" class="workflow">
+        <section aria-labelledby="area-heading">
+          <p class="eyebrow">Steg 1</p>
+          <h2 id="area-heading">Välj område</h2>
+          <p>Klicka på en plats i kartan för att markera kommunen.</p>
+          <form id="municipality-form">
+            <label for="municipality-code">Eller ange fyrsiffrig kommunkod</label>
+            <input id="municipality-code" name="code" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" required placeholder="Till exempel 0380" />
+            <button type="submit">Välj kommun</button>
+          </form>
+          <p id="selection-status" role="status">Ingen kommun vald.</p>
+          <p class="source-note" id="boundary-source"></p>
+          <p class="source-note">Flera kommuner, regioner och egna ritade områden kommer i senare steg.</p>
+        </section>
+        <section aria-labelledby="data-heading">
+          <p class="eyebrow">Steg 2</p>
+          <h2 id="data-heading">Välj data</h2>
+          <label class="planned-option"><input type="checkbox" disabled /> Befolkning <span>Planerat</span></label>
+          <p>Inga tematiska data finns tillgängliga ännu. Befolkning blir det första lagret.</p>
+        </section>
+        <section aria-labelledby="analysis-heading">
+          <p class="eyebrow">Steg 3</p>
+          <h2 id="analysis-heading">Analys</h2>
+          <p id="analysis-status">Välj en kommun i steg 1. Analysfunktioner är planerade och ännu inte tillgängliga.</p>
+        </section>
+      </aside>
       <section aria-labelledby="map-heading">
         <div class="map-heading">
           <h2 id="map-heading">Sverigekarta</h2>
@@ -24,7 +52,6 @@
         <p id="map-status" role="status">Laddar bakgrundskartan…</p>
       </section>
     </main>
-    <footer>Bakgrundskarta: OpenStreetMap. Ingen befolkningsstatistik visas i denna projektgrund.</footer>
-    <script type="module" src="/src/main.ts"></script>
+    <footer>Bakgrundskarta: OpenStreetMap. Kommungränser via <a href="https://kart-api.se/docs/attribution/">kart-api</a>. Ingen befolkningsstatistik visas ännu.</footer>
   </body>
 </html>
