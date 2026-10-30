@@ -5,9 +5,9 @@ Du ansvarar för projektets produktion och ska samtidigt få utrymme att först�
 ## Aktuellt läge
 
 - P1-grunden är implementerad och sammanslagen till `main` genom PR #10.
-- P2 pågår på `feat/2-datakallor-datakontrakt` och har lokala ändringar som ska bevaras.
-- Ingen version är publicerad.
-- Första framtida publicering ska ske via GitHub-kontot `yakimovskagabriela-ctrl`; gislab.se är slutmålet.
+- P2 pågår och finns med som arbetsmaterial i denna offentliga kopia. Ursprunglig P2-gren och lokala GISLAB-ändringar bevaras separat.
+- [P1-kartan](https://yakimovskagabriela-ctrl.github.io/platsorientering/) är publicerad den 30 oktober 2026.
+- Push till detta repos `main` bygger och publicerar automatiskt efter godkända tester. gislab.se är ett senare slutmål.
 
 ## Börja ett arbetspass
 

@@ -4,16 +4,17 @@ Detta är en mall som Gabriela fyller i under projektet och färdigställer i P8
 
 ## Leverans
 
-- Produktions-URL: inte publicerad.
-- GitHub-förhandsversion: inte publicerad; planerad via `yakimovskagabriela-ctrl`.
-- Levererad version och commit: ej fastställda.
-- Datum och utförare: ej fastställda.
+- Slutmiljö på gislab.se: inte publicerad.
+- GitHub-förhandsversion: [P1-kartan](https://yakimovskagabriela-ctrl.github.io/platsorientering/).
+- Första publicerade commit: `ed4ffc0922c930b888f4a62a7c6854ccf8435aa1` i Gabrielas offentliga repo. Pågående P2 finns som källkod men är inte integrerat i gränssnittet.
+- Datum och utförare: 30 oktober 2026, Codex på Gabrielas uttryckliga uppdrag.
+- Verifierat: 63 tester, typkontroll och bygge passerade lokalt. GitHub CI och Pages-deployment lyckades; HTML, CSS och JavaScript svarade HTTP 200. Ny manuell browserkontroll av den publicerade sidan återstår.
 - Produktionsansvarig under projektet: Gabriela.
 - Beställare och kontakt efter överlämning: Henrik; förvaltningsupplägg fastställs före avslut.
 
 ## Installation och bygge
 
-Fyll i Node-version, installationskommando, startkommando, kontroller, bygge och konfiguration. Beskriv hur en kollega kommer från en ny klon till en fungerande lokal app utan lokala specialfiler.
+Node-version anges i `.nvmrc` (24.x). Kör `npm ci`, `npm test` och `npm run build -- --base=/platsorientering/`. Lokal utveckling: `npm run dev`. Klona `yakimovskagabriela-ctrl/platsorientering`; se README.
 
 ## Data och metod
 

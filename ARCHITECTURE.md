@@ -1,6 +1,6 @@
 # Arkitektur
 
-Status: beslutad utgångspunkt för implementation. P1-grunden är implementerad och sammanslagen till `main`. P2 pågår med datakontrakt, validering, källunderlag, testfixturer och kart-api-adaptrar; lokala P2-ändringar är ännu inte fullständigt committade eller granskade. Gränssnittet visar fortfarande bara bakgrundskartan. Aktuell funktionsstatus finns i README och beslut dokumenteras i docs/DECISIONS.md.
+Status: P1-kartgrunden är implementerad och publicerad på GitHub Pages. Den offentliga kopian innehåller också pågående P2 med datakontrakt, validering, källunderlag, testfixturer och kart-api-adaptrar; dessa är ännu inte färdiggranskade eller inkopplade i gränssnittet. Aktuell funktionsstatus finns i README och beslut dokumenteras i docs/DECISIONS.md.
 
 ## Grundval
 

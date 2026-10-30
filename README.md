@@ -11,7 +11,9 @@ Projektet har två lika viktiga mål: Gabriela ska lära sig bygga kartor och pr
 | P1 – projektgrund | Implementerad och sammanslagen till `main` genom PR #10. Kartan visar OpenStreetMap och har zoom, panorering och återställning. |
 | P2 – datakällor och kontrakt | Pågår. Den offentliga kopian innehåller Gabrielas aktuella P2-arbete, inklusive adaptrar, datakontrakt och tester. Det är ännu inte färdiggranskat eller inkopplat i kartans gränssnitt. |
 | P3 och senare funktioner | Planerade. Kommunval, befolkningslager, teckenförklaring, regioner och sammansatta områden finns ännu inte i gränssnittet. |
-| Publicering | GitHub Actions bygger och publicerar `dist/` vid push till detta repos `main`, om tester och bygge lyckas. Körningar och verklig URL verifieras på GitHub. |
+| Publicering | Första GitHub Pages-publiceringen lyckades den 30 oktober 2026. GitHub Actions bygger och publicerar `dist/` vid push till detta repos `main`, om tester och bygge lyckas. |
+
+Öppna [kartan](https://yakimovskagabriela-ctrl.github.io/platsorientering/). Första [deployment-körningen](https://github.com/yakimovskagabriela-ctrl/platsorientering/actions/runs/41041504869) lyckades; HTML, CSS och JavaScript verifierades med HTTP 200.
 
 Detta är Gabrielas offentliga källkodsrepo: `yakimovskagabriela-ctrl/platsorientering`. Det skapades som en kopia av projektets aktuella arbetsfiler den 30 oktober 2026, utan GISLAB-repots Git-historik eller hemligheter. Ursprungligt arbete i `gislab-se/platsorientering` bevaras separat. Publicering sker direkt från detta repos `main` med GitHub Actions; ingen personal access token behövs. Se [publiceringsguiden](docs/DEPLOYMENT.md). Slutpublicering på **gislab.se** sker i projektets slutskede.
 

@@ -2,7 +2,7 @@
 
 Alla produktionsuppgifter ägs av Gabriela. Henrik ger kravstöd och återkoppling. Arbetet ska ge både lärande och en användbar geografisk tittfunktion. Rubrikerna P1–P9 används även för GitHub-issues; aktuell detaljstatus följs där.
 
-**Färdigt:** P1-implementationen är sammanslagen till `main` genom PR #10. **Pågår:** P2 på grenen `feat/2-datakallor-datakontrakt`; tre commits finns på GitHub och ytterligare lokala ändringar är inte committade. **Planerat:** P3–P8. P9 är en senare utredning. Ingen projektversion är publicerad.
+**Färdigt:** P1-kartgrunden är implementerad och publicerad på GitHub Pages den 30 oktober 2026. **Pågår:** den offentliga kopian innehåller aktuellt P2-arbete med kontrakt, adaptrar och tester; granskning och integration återstår. Ursprunglig P2-gren och lokala ändringar i GISLAB-repot bevaras separat. **Planerat:** P3–P8. P9 är en senare utredning.
 
 Första funktionsmål: P1–P4 ger en kommunöversikt med befolkning. Regioner och sammansatta områden införs därefter i avgränsade steg. Den offentliga källkodskopian `yakimovskagabriela-ctrl/platsorientering` publicerar förhandsversionen med GitHub Actions från sitt `main`, efter godkända tester och bygge. P2-arbetet i kopian är fortsatt pågående. Slutpublicering på gislab.se ingår i P8.
 

@@ -14,7 +14,7 @@ I repots **Settings → Pages → Build and deployment → Source** ska **GitHub
 
 Workflowet använder repots automatiska `GITHUB_TOKEN`: byggjobbet har `contents: read`, deployment-jobbet har `pages: write` och `id-token: write`. Ingen separat personal access token behövs. Det tidigare `PAGES_DEPLOY_TOKEN` i GISLAB-repot används inte och har lämnats orört.
 
-Förväntad adress: `https://yakimovskagabriela-ctrl.github.io/platsorientering/`. Kontrollera den efter första deploymenten; en förväntad adress är inte bevis på publicering. Kontrollera karta, zoom, panorering, `Visa Sverige`, OpenStreetMap-attribution och att resurserna laddas. En lyckad körning syns under repots **Actions**.
+Verifierad adress: [kartan](https://yakimovskagabriela-ctrl.github.io/platsorientering/). Första [deploymenten](https://github.com/yakimovskagabriela-ctrl/platsorientering/actions/runs/41041504869) av commit `ed4ffc0` lyckades den 30 oktober 2026. HTML, CSS och JavaScript svarade HTTP 200. Ny manuell kontroll av kartan, zoom, panorering, `Visa Sverige` och OpenStreetMap-attribution på den publicerade sidan återstår. Körningar syns under repots **Actions**.
 
 Gabriela styr uppdateringarna genom vad hon pushar eller mergar till detta repos `main`. Feature-grenar publiceras inte. GISLAB-repots grenar och lokala ändringar publiceras inte automatiskt till detta repo.
 
