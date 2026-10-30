@@ -1,0 +1,267 @@
+{
+  "synthetic": false,
+  "description": "Kommunstatistik: tre kommuner och tre publicerade mått.",
+  "source": {
+    "provider": "SCB",
+    "url": "https://statistikdatabasen.scb.se/api/v2/tables/TAB628/data?lang=sv&outputFormat=json-stat2&valueCodes%5BRegion%5D=0380%2C1280%2C2584&valueCodes%5BKon%5D=1%2B2&valueCodes%5BContentsCode%5D=BE0101U1%2CBE0101U2%2CBE0101U3&valueCodes%5BTid%5D=2025",
+    "method": "GET",
+    "retrievedAt": "2026-10-28T22:18:16.724Z",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://www.scb.se/om-scb/om-scb.se-och-anvandningsvillkor/",
+    "licenseCheckedOn": "2026-10-28",
+    "attribution": "Källa: SCB",
+    "referenceTimes": {
+      "population": "2025-12-31",
+      "landArea": "2026-01-01"
+    },
+    "crs": {
+      "status": "not-applicable"
+    },
+    "processing": "Komplett JSON-svar bevarat semantiskt; endast indrag och projektets metadata tillagda."
+  },
+  "httpStatus": 200,
+  "body": {
+    "version": "2.0",
+    "class": "dataset",
+    "label": "Befolkningstäthet (invånare per kvadratkilometer) m.m efter region, kön och år",
+    "source": "SCB",
+    "updated": "2026-02-24T07:00:00Z",
+    "link": {
+      "related": [
+        {
+          "extension": {
+            "relation": "statistics-homepage",
+            "category": null,
+            "metaid": "PRODUCTCODE:BE0101"
+          },
+          "href": "https://www.scb.se/BE0101",
+          "label": "Statistiksida",
+          "type": "text/html"
+        }
+      ]
+    },
+    "note": [
+      "Från och med referensåret 2025 och framåt är en liten kontrollerad slumpmässig osäkerhet införd i samtliga redovisade uppgifter. Osäkerheten har tillförts för att skydda enskilda personer så att ingen riskerar att röjas i statistiken. Till följd av detta så är inte alltid de redovisade totalerna lika med summan av deras redovisade delar.  \r\nOm redovisade statistikvärden adderas för att skapa en ny total, så adderas även osäkerheten. Det finns därför risk för att den nya totalen innehåller större osäkerhet än vad som, enligt metoden, skulle ha tillförts ett enskilt statistikvärde.  \r\nMetoden som används för röjandekontroll heter Cell Key Method (CKM). Du kan läsa mer om metoden här: [Skyddsmetoder för röjandekontroll](https://www.scb.se/dokumentation/statistiska-metoder/skyddsmetoder-for-rojandekontroll/) och här: [Utveckling av röjandeskyddet](https://www.scb.se/dokumentation/statistikomraden-under-forandring/utveckling-av-rojandeskyddet/), samt i befolkningsstatistikens dokumentation (kvalitetsdeklarationen, avsnitt 2.2.6).  \r\nFAQ om CKM-metoden hittar du här: [Frågor och svar om röjandeskydd i befolkningsstatistiken](https://www.scb.se/FAQ-CKM)",
+      "Landarealer beräknas som totalareal minus vattenareal.  \r\nVid beräkningen används Lantmäteriets data i skala 1:10 000.  \r\nArealen har till och med 1 januari 2024 beräknats enligt sfärisk metod. Från och med januari 2025 är arealen beräknad i ortogonal (platt) metod i koordinatsystem i SWEREF99 TM.  \r\nEn hektar är 10 000 kvadratmeter, eller 0,01 km², dvs arean av till exempel en kvadrat med måtten 100 m × 100 m."
+    ],
+    "role": {
+      "time": [
+        "Tid"
+      ],
+      "metric": [
+        "ContentsCode"
+      ]
+    },
+    "id": [
+      "Region",
+      "Kon",
+      "ContentsCode",
+      "Tid"
+    ],
+    "size": [
+      3,
+      1,
+      3,
+      1
+    ],
+    "dimension": {
+      "Region": {
+        "label": "region",
+        "note": [
+          "2012-09-12 korrigerades värden för kommunerna Hammarö, Karlstad och Säffle avseende år 2012."
+        ],
+        "category": {
+          "index": {
+            "1280": 1,
+            "2584": 2,
+            "0380": 0
+          },
+          "label": {
+            "1280": "Malmö",
+            "2584": "Kiruna",
+            "0380": "Uppsala"
+          },
+          "note": {
+            "0380": [
+              "Ny regional indelning fr.o.m. 2003-01-01. Delar av Uppsala kommun (0380) bildar en ny kommun benämnd Knivsta kommun (0330)."
+            ]
+          }
+        },
+        "extension": {
+          "elimination": false,
+          "categoryNoteMandatory": {
+            "0380": {
+              "0": true
+            }
+          },
+          "show": "code_value"
+        }
+      },
+      "Kon": {
+        "label": "kön",
+        "category": {
+          "index": {
+            "1+2": 0
+          },
+          "label": {
+            "1+2": "totalt"
+          }
+        },
+        "extension": {
+          "elimination": true,
+          "eliminationValueCode": "1+2",
+          "show": "value"
+        }
+      },
+      "ContentsCode": {
+        "label": "tabellinnehåll",
+        "category": {
+          "index": {
+            "BE0101U1": 0,
+            "BE0101U2": 1,
+            "BE0101U3": 2
+          },
+          "label": {
+            "BE0101U1": "Invånare per kvadratkilometer",
+            "BE0101U2": "Folkmängd",
+            "BE0101U3": "Landareal i kvadratkilometer"
+          },
+          "note": {
+            "BE0101U1": [
+              "Observera: Vid beräkning av befolkningstätheten (invånare/km²) sätts befolkningen den 31 december i relation till landarealen den 1 januari året därpå.  \r\nBefolkningstäthet är t.o.m. 2017 beräknad på icke avrundade värden för areal. Från och med 2018 års statistik används de arealer som redovisas i tabellen för att beräkna befolkningstäthet."
+            ],
+            "BE0101U3": [
+              "En ny metod med mer detaljerade, arealberäkningar genomfördes fr.o.m. 2000-01-01. Av denna anledning är det vanskligt att jämföra uppgifter för åren före respektive efter år 2000. Ytterligare en metodförändring med mer detaljerade, arealberäkningar  genomfördes fr.o.m. 2012-01-01. Det gör att det är vanskligt att jämföra uppgifter för åren före respektive efter år 2012. Mellan 2000-01-01 och fram till och med 2018-01-01 summerar inte kommunuppgifterna till län, eftersom det finns s.k. enklaver som inte kunnat kommunfördelats. Från och med 2019-01-01 kan kommunuppgifterna summeras till län. I landarealen ingår vattendrag 6 meter och smalare samt gölar och mindre vattensamlingar, upp till max några 10-tal m² stora.",
+              "Angivet år avser landarealen den 1 januari följande år.",
+              "Mellan 2012 till 2018 summerar inte kommunuppgifterna till län, eftersom det finns s.k. enklaver som inte kunnat kommunfördelas. Från 2019 har alla enklaver kunnat kommunfördelas.",
+              "I landarealen ingår vattendrag 6 meter och smalare samt gölar och mindre vattensamlingar, upp till max några 10-tal kvadratmeter stora."
+            ]
+          },
+          "unit": {
+            "BE0101U1": {
+              "base": "antal",
+              "decimals": 1
+            },
+            "BE0101U2": {
+              "base": "antal",
+              "decimals": 0
+            },
+            "BE0101U3": {
+              "base": "kvadratkilometer",
+              "decimals": 2
+            }
+          }
+        },
+        "extension": {
+          "elimination": false,
+          "categoryNoteMandatory": {
+            "BE0101U1": {
+              "0": true
+            },
+            "BE0101U3": {
+              "1": true,
+              "3": true
+            }
+          },
+          "refperiod": {
+            "BE0101U1": "Folkmängd 31 dec resp år i relation till landarealen den 1 januari året därpå",
+            "BE0101U2": "31 december respektive år",
+            "BE0101U3": "Angivet år avser landarealen den 1 januari följande år"
+          },
+          "show": "value",
+          "measuringType": {
+            "BE0101U1": "Stock",
+            "BE0101U2": "Stock",
+            "BE0101U3": "Stock"
+          },
+          "priceType": {
+            "BE0101U1": "NotApplicable",
+            "BE0101U2": "NotApplicable",
+            "BE0101U3": "NotApplicable"
+          },
+          "adjustment": {
+            "BE0101U1": "None",
+            "BE0101U2": "None",
+            "BE0101U3": "None"
+          },
+          "alternativeText": {
+            "BE0101U1": "Invånare per kvadratkilometer",
+            "BE0101U2": "Folkmängd",
+            "BE0101U3": "Landareal i kvadratkilometer"
+          }
+        }
+      },
+      "Tid": {
+        "label": "år",
+        "category": {
+          "index": {
+            "2025": 0
+          },
+          "label": {
+            "2025": "2025"
+          }
+        },
+        "extension": {
+          "elimination": false,
+          "show": "code"
+        }
+      }
+    },
+    "extension": {
+      "noteMandatory": {
+        "0": true,
+        "1": true
+      },
+      "px": {
+        "infofile": "BE0101",
+        "tableid": "TAB628",
+        "decimals": 0,
+        "official-statistics": true,
+        "aggregallowed": false,
+        "copyright": false,
+        "language": "sv",
+        "contents": "Befolkningstäthet (invånare per kvadratkilometer) m.m",
+        "descriptiondefault": false,
+        "heading": [
+          "ContentsCode",
+          "Tid"
+        ],
+        "stub": [
+          "Region",
+          "Kon"
+        ],
+        "matrix": "TAB628",
+        "subject-code": "BE",
+        "subject-area": "Befolkning"
+      },
+      "discontinued": null,
+      "contact": [
+        {
+          "name": "Esbjörn Pettersson",
+          "organization": "SCB",
+          "phone": "010-479 45 72",
+          "mail": "mark.vatten.gis@scb.se",
+          "raw": "Esbjörn Pettersson, SCB# +46 010-479 45 72#mark.vatten.gis@scb.se"
+        },
+        {
+          "name": "Stefan Svanström",
+          "organization": "SCB",
+          "phone": "010-479 45 58",
+          "mail": "Stefan.Svanstrom@scb.se",
+          "raw": "Stefan Svanström, SCB# +46 010-479 45 58#Stefan.Svanstrom@scb.se"
+        }
+      ]
+    },
+    "value": [
+      113.8,
+      249726,
+      2193.84,
+      2336.8,
+      367924,
+      157.45,
+      1.2,
+      22402,
+      19307
+    ]
+  }
+}

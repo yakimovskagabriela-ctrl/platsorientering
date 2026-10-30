@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Utforska platser i Sverige med GISLABs Platsorientering." />
+    <title>Platsorientering Sverige | GISLAB</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Hoppa till innehållet</a>
+    <header>
+      <p class="eyebrow">GISLAB · Projektgrund P1</p>
+      <h1>Platsorientering Sverige</h1>
+      <p>Utforska Sverige på kartan. Kommunval och befolkningsstatistik kommer i nästa etapper.</p>
+    </header>
+    <main id="main">
+      <section aria-labelledby="map-heading">
+        <div class="map-heading">
+          <h2 id="map-heading">Sverigekarta</h2>
+          <button id="reset-map" type="button">Visa Sverige</button>
+        </div>
+        <p id="map-help">Flytta kartan genom att dra eller använda piltangenterna när kartan har fokus. Zooma med + och −.</p>
+        <div id="map" aria-label="Interaktiv karta över Sverige" aria-describedby="map-help"></div>
+        <p id="map-status" role="status">Laddar bakgrundskartan…</p>
+      </section>
+    </main>
+    <footer>Bakgrundskarta: OpenStreetMap. Ingen befolkningsstatistik visas i denna projektgrund.</footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

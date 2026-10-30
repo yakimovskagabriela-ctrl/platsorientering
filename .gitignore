@@ -1,0 +1,34 @@
+# Beroenden och byggresultat
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+
+# Hemligheter och lokal konfiguration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Rådata, cache och lokala artefakter
+data/raw/
+data/cache/
+.cache/
+.local/
+*.log
+*.gpkg
+*.tif
+*.tiff
+*.mbtiles
+*.pmtiles
+
+# Pythonverktyg om de behövs senare
+.venv/
+__pycache__/
+*.pyc
+
+# Operativsystem
+.DS_Store
+Thumbs.db

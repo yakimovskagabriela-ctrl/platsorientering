@@ -1,0 +1,36 @@
+{
+  "synthetic": true,
+  "description": "Syntetiskt minimalt JSON-stat2-underlag, inte SCB-statistik eller en fullständig metadatakopia.",
+  "table": "TAB628",
+  "cases": [
+    {
+      "id": "three-measures-zero-and-missing",
+      "purpose": "Dimensionsordning, kommunkod som text, noll och saknat värde. Null får inte automatiskt tolkas som sekretess.",
+      "httpStatus": 200,
+      "body": {
+        "version": "2.0",
+        "class": "dataset",
+        "label": "SYNTETISKA TESTDATA",
+        "id": ["Region", "Kon", "ContentsCode", "Tid"],
+        "size": [1, 1, 3, 1],
+        "dimension": {
+          "Region": { "category": { "index": { "0001": 0 }, "label": { "0001": "Syntetiska Testkommunen" } } },
+          "Kon": { "category": { "index": { "1+2": 0 } } },
+          "ContentsCode": { "category": { "index": { "BE0101U1": 0, "BE0101U2": 1, "BE0101U3": 2 } } },
+          "Tid": { "category": { "index": { "2000": 0 } } }
+        },
+        "value": [0, 0, null]
+      }
+    },
+    {
+      "id": "incomplete-values",
+      "purpose": "Avsiktlig motsägelse: dimensionerna kräver tre datapositioner men endast två levereras. Får inte bli ett fullständigt uttag.",
+      "httpStatus": 200,
+      "bodySubset": {
+        "id": ["Region", "Kon", "ContentsCode", "Tid"],
+        "size": [1, 1, 3, 1],
+        "value": [0, 0]
+      }
+    }
+  ]
+}

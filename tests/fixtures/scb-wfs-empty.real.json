@@ -1,0 +1,33 @@
+{
+  "synthetic": false,
+  "description": "Geografiskt tomt utsnitt, med crs=null.",
+  "source": {
+    "provider": "SCB",
+    "url": "https://geodata.scb.se/geoserver/stat/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=stat%3Abefolkning_1km_2025&outputFormat=application%2Fjson&srsName=EPSG%3A3006&BBOX=0%2C0%2C1000%2C1000%2CEPSG%3A3006&maxFeatures=5&sortBy=objectid&startIndex=0",
+    "method": "GET",
+    "retrievedAt": "2026-10-28T22:18:17.127Z",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://www.scb.se/om-scb/om-scb.se-och-anvandningsvillkor/",
+    "licenseCheckedOn": "2026-10-28",
+    "attribution": "Källa: SCB",
+    "referenceTimes": {
+      "population": "2025-12-31"
+    },
+    "crs": {
+      "status": "known",
+      "identifier": "EPSG:3006",
+      "evidence": "https://geodata.scb.se/geoserver/stat/wfs?service=WFS&version=1.1.0&request=GetCapabilities"
+    },
+    "processing": "Komplett JSON-svar bevarat semantiskt; endast indrag och projektets metadata tillagda."
+  },
+  "httpStatus": 200,
+  "body": {
+    "type": "FeatureCollection",
+    "features": [],
+    "totalFeatures": 0,
+    "numberMatched": 0,
+    "numberReturned": 0,
+    "timeStamp": "2026-10-28T22:18:15.885Z",
+    "crs": null
+  }
+}

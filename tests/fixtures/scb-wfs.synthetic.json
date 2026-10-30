@@ -1,0 +1,49 @@
+{
+  "synthetic": true,
+  "description": "Påhittade rutobjekt och koordinater. Inga verkliga SCB-rutor eller befolkningsvärden.",
+  "layer": "stat:befolkning_1km_2025",
+  "cases": [
+    {
+      "id": "limited-page-projected-geometry",
+      "purpose": "Normal första sida i ett ofullständigt uttag; noll är ett värde och EPSG:3006 är inte WGS84.",
+      "httpStatus": 200,
+      "body": {
+        "type": "FeatureCollection",
+        "numberMatched": 2,
+        "numberReturned": 1,
+        "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3006" } },
+        "features": [{
+          "type": "Feature",
+          "geometry": { "type": "Polygon", "coordinates": [[[400000, 6400000], [401000, 6400000], [401000, 6401000], [400000, 6401000], [400000, 6400000]]] },
+          "properties": {
+            "objectid": 1,
+            "rutid_inspire": "SYNTHETIC-CELL-1",
+            "rutid_scb": "SYNTHETIC-CELL-1",
+            "rutstorl": 1000,
+            "beftotalt": 0,
+            "man": null,
+            "kvinna": null,
+            "referenstid": "20000101"
+          }
+        }]
+      }
+    },
+    {
+      "id": "empty-selection",
+      "purpose": "Lyckat tomt geografiskt uttag, inte nätverks- eller HTTP-fel.",
+      "httpStatus": 200,
+      "body": { "type": "FeatureCollection", "numberMatched": 0, "numberReturned": 0, "features": [] }
+    },
+    {
+      "id": "invalid-population-type",
+      "purpose": "Avsiktligt fel i fältutdrag: befolkning har fel typ, rut-ID saknas. Får inte bli noll eller tomt resultat.",
+      "httpStatus": 200,
+      "bodySubset": {
+        "type": "FeatureCollection",
+        "numberMatched": 1,
+        "numberReturned": 1,
+        "features": [{ "type": "Feature", "geometry": null, "properties": { "beftotalt": "inte ett tal" } }]
+      }
+    }
+  ]
+}
