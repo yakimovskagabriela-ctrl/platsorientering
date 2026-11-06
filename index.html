@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Utforska platser i Sverige med GISLABs Platsorientering." />
     <title>Platsorientering Sverige | GISLAB</title>
-    <script type="module" crossorigin src="/platsorientering/assets/index-BWR5ZY3y.js"></script>
-    <link rel="stylesheet" crossorigin href="/platsorientering/assets/index-CSxXmZa4.css">
+    <script type="module" crossorigin src="/platsorientering/assets/index-BLYpsDl9.js"></script>
+    <link rel="stylesheet" crossorigin href="/platsorientering/assets/index-B68AudF0.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Hoppa till innehållet</a>
@@ -37,13 +37,19 @@
         <section aria-labelledby="data-heading">
           <p class="eyebrow">Steg 2</p>
           <h2 id="data-heading">Välj data</h2>
-          <label class="planned-option"><input type="checkbox" disabled /> Befolkning <span>Planerat</span></label>
-          <p>Inga tematiska data finns tillgängliga ännu. Befolkning blir det första lagret.</p>
+          <label class="planned-option"><input type="checkbox" disabled /> Befolkningsrutor <span>Planerat</span></label>
+          <p>Kommunstatistik från SCB visas automatiskt i Kommunöversikt när du väljer en kommun. Befolkningsrutor som kartlager kommer senare.</p>
         </section>
         <section aria-labelledby="analysis-heading">
           <p class="eyebrow">Steg 3</p>
           <h2 id="analysis-heading">Analys</h2>
           <p id="analysis-status">Välj en kommun i steg 1. Analysfunktioner är planerade och ännu inte tillgängliga.</p>
+          <div role="region" aria-labelledby="municipality-overview-heading">
+            <h3 id="municipality-overview-heading">Kommunöversikt</h3>
+            <div id="municipality-overview-content" role="status" aria-live="polite">
+              <p>Kommunstatistiken har ännu inte lästs in.</p>
+            </div>
+          </div>
         </section>
       </aside>
       <section aria-labelledby="map-heading">
@@ -56,6 +62,6 @@
         <p id="map-status" role="status">Laddar bakgrundskartan…</p>
       </section>
     </main>
-    <footer>Bakgrundskarta: OpenStreetMap. Kommungränser via <a href="https://kart-api.se/docs/attribution/">kart-api</a>. Ingen befolkningsstatistik visas ännu.</footer>
+    <footer>Bakgrundskarta: OpenStreetMap. Kommungränser via <a href="https://kart-api.se/docs/attribution/">kart-api</a>. Kommunstatistik: SCB, TAB628.</footer>
   </body>
 </html>
