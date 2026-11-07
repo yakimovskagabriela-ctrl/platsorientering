@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Utforska platser i Sverige med GISLABs Platsorientering." />
     <title>Platsorientering Sverige | GISLAB</title>
-    <script type="module" crossorigin src="/platsorientering/assets/index-BLYpsDl9.js"></script>
-    <link rel="stylesheet" crossorigin href="/platsorientering/assets/index-B68AudF0.css">
+    <script type="module" crossorigin src="/platsorientering/assets/index-BTZtgWyR.js"></script>
+    <link rel="stylesheet" crossorigin href="/platsorientering/assets/index-B3QUwAtg.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Hoppa till innehållet</a>
@@ -18,7 +18,6 @@
     <main id="main">
       <aside aria-label="Arbetsflöde" class="workflow">
         <section aria-labelledby="area-heading">
-          <p class="eyebrow">Steg 1</p>
           <h2 id="area-heading">Välj område</h2>
           <p>Klicka på en plats i kartan för att markera kommunen.</p>
           <form id="municipality-form">
@@ -26,30 +25,25 @@
             <input id="municipality-query" name="query" type="search" autocomplete="off" aria-describedby="municipality-search-help" placeholder="Till exempel Uppsala eller 0380" />
             <button type="submit">Sök kommun</button>
           </form>
-          <p id="municipality-search-help" class="source-note">Sök och välj en träff. Söktexten ändrar inte ditt val; vald kommun visas nedan. Använd Tab och Enter eller mellanslag för att välja med tangentbordet.</p>
+          <p id="municipality-search-help" class="sr-only">Tryck Sök kommun eller Enter för att söka. En enda träff väljs automatiskt. Vid flera träffar väljer du med Tab och Enter eller mellanslag. Att bara skriva ändrar inte ditt val; vald kommun visas nedan.</p>
           <p id="municipality-search-status" role="status"></p>
           <ul id="municipality-results" aria-label="Sökresultat för kommuner"></ul>
-          <p class="source-note">Kommunnamn och koder: SCB. Gränser: kart-api.</p>
           <p id="selection-status" role="status">Ingen kommun vald.</p>
-          <p class="source-note" id="boundary-source"></p>
+          <div role="region" aria-label="Kommunstatistik för vald kommun">
+            <div id="municipality-overview-content" role="status" aria-live="polite">
+              <p>Kommunstatistiken har ännu inte lästs in.</p>
+            </div>
+          </div>
           <p class="source-note">Flera kommuner, regioner och egna ritade områden kommer i senare steg.</p>
         </section>
         <section aria-labelledby="data-heading">
-          <p class="eyebrow">Steg 2</p>
           <h2 id="data-heading">Välj data</h2>
           <label class="planned-option"><input type="checkbox" disabled /> Befolkningsrutor <span>Planerat</span></label>
           <p>Kommunstatistik från SCB visas automatiskt i Kommunöversikt när du väljer en kommun. Befolkningsrutor som kartlager kommer senare.</p>
         </section>
         <section aria-labelledby="analysis-heading">
-          <p class="eyebrow">Steg 3</p>
-          <h2 id="analysis-heading">Analys</h2>
+          <h2 id="analysis-heading">Resultat och analys</h2>
           <p id="analysis-status">Välj en kommun i steg 1. Analysfunktioner är planerade och ännu inte tillgängliga.</p>
-          <div role="region" aria-labelledby="municipality-overview-heading">
-            <h3 id="municipality-overview-heading">Kommunöversikt</h3>
-            <div id="municipality-overview-content" role="status" aria-live="polite">
-              <p>Kommunstatistiken har ännu inte lästs in.</p>
-            </div>
-          </div>
         </section>
       </aside>
       <section aria-labelledby="map-heading">
