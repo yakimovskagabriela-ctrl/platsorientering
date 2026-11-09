@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Utforska platser i Sverige med GISLABs Platsorientering." />
     <title>Platsorientering Sverige | GISLAB</title>
-    <script type="module" crossorigin src="/platsorientering/assets/index-BTZtgWyR.js"></script>
-    <link rel="stylesheet" crossorigin href="/platsorientering/assets/index-B3QUwAtg.css">
+    <script type="module" crossorigin src="/platsorientering/assets/index-Cx_14rBQ.js"></script>
+    <link rel="stylesheet" crossorigin href="/platsorientering/assets/index-D5RrtInL.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Hoppa till innehållet</a>
@@ -28,6 +28,20 @@
           <p id="municipality-search-help" class="sr-only">Tryck Sök kommun eller Enter för att söka. En enda träff väljs automatiskt. Vid flera träffar väljer du med Tab och Enter eller mellanslag. Att bara skriva ändrar inte ditt val; vald kommun visas nedan.</p>
           <p id="municipality-search-status" role="status"></p>
           <ul id="municipality-results" aria-label="Sökresultat för kommuner"></ul>
+          <details class="place-search">
+            <summary>Sök ort eller plats</summary>
+            <form id="place-form">
+              <label for="place-query">Ortnamn eller plats</label>
+              <input id="place-query" type="search" autocomplete="off" placeholder="Till exempel Fridhem" aria-describedby="place-help" />
+              <label for="place-municipality">Begränsa sökningen till kommun</label>
+              <select id="place-municipality"><option value="">Alla kommuner</option></select>
+              <button type="submit">Sök plats</button>
+            </form>
+            <p id="place-help" class="source-note">Träffarna grupperas per kommun. Välj en kommun för att visa dess gräns och kommunstatistik. Ingen exakt platspunkt visas i detta steg.</p>
+            <p id="place-status" role="status"></p>
+            <ul id="place-results" aria-label="Platsträffar per kommun"></ul>
+            <p id="place-attribution" class="source-note"></p>
+          </details>
           <p id="selection-status" role="status">Ingen kommun vald.</p>
           <div role="region" aria-label="Kommunstatistik för vald kommun">
             <div id="municipality-overview-content" role="status" aria-live="polite">
